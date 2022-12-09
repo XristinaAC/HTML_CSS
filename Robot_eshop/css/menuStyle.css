@@ -1,0 +1,125 @@
+.main {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main a {
+    text-decoration: none;
+    color: rgb(248, 225, 162);
+}
+
+/*                     Responsive
+------------------------------------------------------------------------
+*/
+
+@media screen and (max-width:600px) {
+
+    .main a {
+        display: block;
+    }
+
+    .hamburger img,
+    .close img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo {
+        width: 50%;
+        margin: 10px;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    nav {
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        float: right;
+
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
+    }
+
+    nav:target {
+        transform: translateY(0);
+    }
+
+    nav ul {
+        flex-basis: 100%;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:1500px) {
+
+    .sr-only,
+    .hamburger img,
+    .close img {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+        margin: 10px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:850px) {
+    .logo {
+        float: left;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        margin-top: 50px;
+    }
+
+    nav li {
+        margin: 2px;
+        margin-top: 50px;
+        background-color: #00BFF3;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:850px) {
+    nav ul {
+        justify-content: center;
+        background-color: #00BFF3;
+        padding: 10px;
+    }
+}
